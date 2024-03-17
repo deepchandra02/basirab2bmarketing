@@ -61,7 +61,7 @@ export function NavbarFilled() {
   }, []);
 
   return (
-    <Navbar color="gray" fullWidth>
+    <Navbar color="blue-gray" fullWidth>
       <div className="container mx-auto flex items-center justify-between">
         <div
           // TODO: Add homepage link
