@@ -14,6 +14,7 @@ import {
   CodeBracketSquareIcon,
 } from "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import logo from "../assets/logo.png";
 
 function NavItem({ icon, label }) {
   return (
@@ -62,15 +63,19 @@ export function NavbarFilled() {
   return (
     <Navbar color="gray" fullWidth>
       <div className="container mx-auto flex items-center justify-between">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          color="white"
-          className="mr-4 cursor-pointer"
+        <div
+          // TODO: Add homepage link
+          className="flex gap-2 items-center"
         >
-          Material Tailwind
-        </Typography>
+          <img src={logo} alt="logo" className="h-8 lg:h-16" />
+          <Typography
+            href="#"
+            color="blue-gray"
+            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer"
+          >
+            Basira
+          </Typography>
+        </div>
         <div className="hidden lg:block">
           <NavList />
         </div>
