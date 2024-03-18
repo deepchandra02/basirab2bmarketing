@@ -43,7 +43,7 @@ const Contents = [
   },
 ];
 
-function Page2() {
+function Description() {
   return (
     <div className="bg-[#EBE7E6] p-8">
       <div className="grid min-h-[85vh] px-8">
@@ -74,4 +74,4 @@ function Page2() {
   );
 }
 
-export default Page2;
+export default Description;
