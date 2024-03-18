@@ -61,7 +61,7 @@ export function NavbarFilled() {
   }, []);
 
   return (
-    <Navbar fullWidth className="bg-navbar">
+    <Navbar fullWidth className="bg-navbar border-none">
       <div className="container mx-auto flex items-center justify-between">
         <div
           // TODO: Add homepage link
@@ -70,7 +70,7 @@ export function NavbarFilled() {
           <img src={logo} alt="logo" className="h-8 lg:h-16" />
           <Typography
             href="#"
-            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer text-[#B5E887]"
+            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer text-basiraGreen"
           >
             Basira
           </Typography>

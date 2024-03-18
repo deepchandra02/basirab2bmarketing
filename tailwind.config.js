@@ -8,6 +8,8 @@ module.exports = withMT({
       colors: {
         navbar: '#081B0B',
         heroBody: '#041C09',
+        text: '#C09E3B',
+        basiraGreen: '#B5E887'
       },
     },
   },
