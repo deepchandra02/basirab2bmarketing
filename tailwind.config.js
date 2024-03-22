@@ -6,10 +6,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        navbar: '#081B0B',
-        heroBody: '#041C09',
-        text: '#C09E3B',
-        basiraGreen: '#B5E887'
+        body: '#EBE7E6',
+        gold: '#E1CC7B'
       },
     },
   },

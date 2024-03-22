@@ -7,24 +7,19 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import {
-  Square3Stack3DIcon,
-  UserCircleIcon,
-  PuzzlePieceIcon,
-  CodeBracketSquareIcon,
-} from "@heroicons/react/24/solid";
+// import {
+//   Square3Stack3DIcon,
+//   UserCircleIcon,
+//   PuzzlePieceIcon,
+//   CodeBracketSquareIcon,
+// } from "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
 
 function NavItem({ icon, label }) {
   return (
     <a href="#">
-      <Typography
-        as="li"
-        variant="small"
-        color="white"
-        className="flex items-center gap-1.5 p-1 font-normal"
-      >
+      <Typography className="flex items-center gap-1.5 p-1 lg:text-2xl">
         {icon}
         {label}
       </Typography>
@@ -34,16 +29,21 @@ function NavItem({ icon, label }) {
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8">
+    <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
       <NavItem
-        icon={<Square3Stack3DIcon className="h-5 w-5" />}
-        label="Pages"
+        //TODO: Add icon
+        // icon={<Square3Stack3DIcon className="h-5 w-5" />}
+        label="Process"
       />
-      <NavItem icon={<UserCircleIcon className="h-5 w-5" />} label="Account" />
-      <NavItem icon={<PuzzlePieceIcon className="h-5 w-5" />} label="Blocks" />
       <NavItem
-        icon={<CodeBracketSquareIcon className="h-5 w-5" />}
-        label="Docs"
+        //TODO: Add icon
+        // icon={<UserCircleIcon className="h-5 w-5" />}
+        label="Features"
+      />
+      <NavItem
+        //TODO: Add icon
+        // icon={<PuzzlePieceIcon className="h-5 w-5" />}
+        label="Guest"
       />
     </ul>
   );
@@ -61,26 +61,33 @@ export function NavbarFilled() {
   }, []);
 
   return (
-    <Navbar fullWidth className="bg-navbar border-none">
+    <Navbar
+      fullWidth
+      className="sticky top-0 z-50 bg-black bg-opacity-100 border-none text-gold"
+    >
       <div className="container mx-auto flex items-center justify-between">
         <div
           // TODO: Add homepage link
           className="flex gap-2 items-center"
         >
-          <img src={logo} alt="logo" className="h-8 lg:h-16" />
+          <img src={logo} alt="logo" className="h-8 lg:h-10" />
           <Typography
             href="#"
-            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer text-basiraGreen"
+            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer"
           >
             Basira
           </Typography>
         </div>
-        <div className="hidden lg:block">
+
+        <div className="hidden lg:flex gap-16">
           <NavList />
+          <Button
+            size="md"
+            className="hidden border border-gold bg-transparent text-gold hover:text-black hover:bg-gold lg:inline-block"
+          >
+            Request Access
+          </Button>
         </div>
-        <Button color="white" size="sm" className="hidden lg:inline-block">
-          Buy Now
-        </Button>
         <IconButton
           size="sm"
           variant="text"
