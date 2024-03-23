@@ -19,7 +19,7 @@ import logo from "../assets/logo.png";
 function NavItem({ icon, label }) {
   return (
     <a href="#">
-      <Typography className="flex items-center gap-1.5 p-1 lg:text-2xl">
+      <Typography className="flex items-center gap-1.5 p-1 font-medium lg:text-xl">
         {icon}
         {label}
       </Typography>

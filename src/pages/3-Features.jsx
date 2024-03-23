@@ -1,60 +1,124 @@
-import { Typography, IconButton, Card } from "@material-tailwind/react";
+import React, { useRef } from "react";
+import { IconButton } from "@material-tailwind/react";
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  CreditCardIcon,
-  UserGroupIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/solid";
+  Card,
+  CardHeader,
+  CardBody,
+  Typography,
+  Button,
+} from "@material-tailwind/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import heroChart from "../assets/hero/hero_chart.png";
 
-const faqs = [
+function ContentCard({ img, title, desc, details }) {
+  return (
+    <Card shadow={true} className="min-w-96">
+      <CardHeader
+        shadow={false}
+        color="blue-gray"
+        className="mt-5 relative h-52"
+      >
+        <img src={img} alt="" />
+      </CardHeader>
+      <CardBody>
+        <Typography
+          variant="small"
+          className="mb-3 !font-normal !text-gray-500"
+        >
+          {details}
+        </Typography>
+        <Typography
+          as="a"
+          href="#"
+          variant="h5"
+          color="blue-gray"
+          className="mb-3 normal-case transition-colors hover:text-gray-700"
+        >
+          {title}
+        </Typography>
+        <Typography className="mb-5 !text-base !font-normal !text-gray-500">
+          {desc}
+        </Typography>
+        <Button color="gray" variant="outlined">
+          from/night
+        </Button>
+      </CardBody>
+    </Card>
+  );
+}
+
+const contents = [
   {
-    title: "Recommendations for guests",
-    icon: <ShoppingCartIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "High-margin menu item recommendations based on customers' demographics, preferences, allergies, frequency and time of visits, customer feedback, and special requests.",
+    img: heroChart,
+    title: "Lovely and cozy apartment",
+    details: "Entire Apartment • 3 Guests • 2 Beds",
+    desc: "Siri's latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward.",
   },
   {
-    title: "Demand analytics and forecasting",
-    icon: <CreditCardIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Forecasting based on consumer behavior information (time of ordering specific meals) which allows to order and prepare food in advance. Full analytics for hourly, daily, weekly, and monthly operations. ",
+    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog2.jpg",
+    title: "Single details in the center of city",
+    details: "Private details • 1 Guests • 1 Sofa",
+    desc: "As Uber works through a huge amount of internal management turmoil, the company is also consolidating more of its international business.",
   },
   {
-    title: "Menu Customization",
-    icon: <UserGroupIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Data-driven menu customization based on guests requests: food choices and rating, adjust the menu to meet the demand and follow the trends. ",
+    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog3.jpg",
+    title: "Independent house beddetails",
+    details: "Entire Apartment • 4 Guests • 2 Beds",
+    desc: "Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music.",
   },
   {
-    title: "Online Orders",
-    icon: <UserGroupIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Online order management with special notes and notifications with the ability to modify the order in minutes. We reduce orders made by mistake.",
+    img: heroChart,
+    title: "Lovely and cozy apartment",
+    details: "Entire Apartment • 3 Guests • 2 Beds",
+    desc: "Siri's latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward.",
   },
   {
-    title: "Stock management system automation",
-    icon: <UserGroupIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Automate stock orders based on demand predictions to ensure availability and minimize customer dissatisfaction.",
+    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog2.jpg",
+    title: "Single details in the center of city",
+    details: "Private details • 1 Guests • 1 Sofa",
+    desc: "As Uber works through a huge amount of internal management turmoil, the company is also consolidating more of its international business.",
   },
   {
-    title: "Order automation",
-    icon: <UserGroupIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Automation of the most frequent guest orders",
-  },
-  {
-    title: "TBD",
-    icon: <UserGroupIcon className="h-5 w-5" strokeWidth={2} />,
-    desc: "Timely notifications for waiters to come to a table and suggest something according to the order and recommended approach",
+    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog3.jpg",
+    title: "Independent house beddetails",
+    details: "Entire Apartment • 4 Guests • 2 Beds",
+    desc: "Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music.",
   },
 ];
 
 function Features() {
+  const scrollContainerRef = useRef(null);
+
+  const scrollAmount = 300; // Adjust the scroll amount as needed
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="bg-[#EBE7E6] p-8">
-      <div className="grid min-h-[85vh] px-8">
+    <div className="p-8">
+      <div className="grid max-w-screen-lg mx-auto">
         <div className="flex justify-start gap-x-8 my-4">
-          <Typography variant="h3" className="" color="blue-gray">
+          <Typography className="text-4xl font-bold" color="black">
             Features
           </Typography>
           <div className="flex w-max gap-4">
             <IconButton
+              onClick={scrollLeft}
               variant="outlined"
               ripple={true}
               className="rounded-full"
@@ -62,6 +126,7 @@ function Features() {
               <ChevronLeftIcon className="w-6 h-6" />
             </IconButton>
             <IconButton
+              onClick={scrollRight}
               variant="outlined"
               ripple={true}
               className="rounded-full"
@@ -70,21 +135,18 @@ function Features() {
             </IconButton>
           </div>
         </div>
-        <div className="mb-10 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-          {faqs.map(({ title, desc, icon }) => (
-            <Card key={title} shadow={true} className="p-6">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-gray-900 text-left text-white">
-                {icon}
-              </div>
-              <Typography color="blue-gray" className="pb-6" variant="h4">
-                {title}
-              </Typography>
-              <div className="border-t border-gray-200 pt-4">
-                <Typography className="font-normal !text-gray-500">
-                  {desc}
-                </Typography>
-              </div>
-            </Card>
+        <div
+          ref={scrollContainerRef}
+          className="flex overflow-x-auto no-scrollbar space-x-4"
+        >
+          {contents.map(({ img, title, desc, details }) => (
+            <ContentCard
+              details={details}
+              key={title}
+              img={img}
+              title={title}
+              desc={desc}
+            />
           ))}
         </div>
       </div>

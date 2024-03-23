@@ -1,28 +1,25 @@
 import React from "react";
 import { Button, Typography } from "@material-tailwind/react";
-import herobg from "../assets/hero.png";
+import herobg from "../assets/hero/hero.png";
 
 function Hero() {
   return (
     <div className="bg-black text-gold lg:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
       <div className="grid">
         <div className="container mt-8 md:mt-32 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
-          <Typography
-            variant="h1"
-            className="text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug"
-          >
+          <Typography className="font-extrabold text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug">
             Emotionally Intelligent <br /> AI Waiter
           </Typography>
         </div>
 
-        <div className="container my-4 grid gap-y-5 mx-auto md:hidden place-items-center text-center">
-          <Typography variant="h4" className="text-6xl sm:text-7xl">
+        <div className="container  my-4 grid gap-y-5 mx-auto md:hidden place-items-center text-center">
+          <Typography className="font-extrabold text-6xl sm:text-7xl">
             Emotionally
           </Typography>
-          <Typography variant="h4" className="text-6xl sm:text-7xl">
+          <Typography className="font-extrabold text-6xl sm:text-7xl">
             Intelligent
           </Typography>
-          <Typography variant="h4" className="text-4xl sm:text-5xl">
+          <Typography className="font-extrabold text-4xl sm:text-5xl">
             AI Waiter
           </Typography>
         </div>
