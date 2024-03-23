@@ -4,9 +4,9 @@ import herobg from "../assets/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-black text-gold min-h-screen">
+    <div className="bg-black text-gold lg:min-h-screen">
       <div className="grid">
-        <div className="container mt-8 md:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
+        <div className="container mt-8 md:mt-32 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
           <Typography
             variant="h1"
             className="text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug"
@@ -30,40 +30,24 @@ function Hero() {
           className="h-[50em] -mt-24 md:h-[65em] lg:mt-0 xl:h-[90em] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${herobg})` }}
         ></div>
-        <div className="container my-auto mx-auto grid place-items-center text-center">
-          <Typography className="my-4 max-w-3xl text-text text-xl lg:text-2xl font-medium">
-            Increase your restaurant’s revenue and customer loyalty with
-            analytics at no additional hiring cost.
+        <div className="container -mt-36 md:-mt-52 lg:-mt-24 mx-auto grid place-items-center text-center px-4">
+          <Typography className="text-white text-lg md:text-4xl font-medium">
+            Boost your restaurant’s sales with analytics. <br />
+            No additional staff required.
           </Typography>
           <div className="mt-8 grid w-full place-items-start md:justify-center">
+            {/* //TODO: Functionality to give access */}
             <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
-              {/* <Input color="white" label="Enter your email" size="lg" /> */}
-              <Button className="w-full px-4 md:w-[12rem] bg-text text-black">
-                Send Menu
+              <Button
+                size="lg"
+                className="border border-gold hover:bg-gold hover:text-black text-gold bg-transparent transition duration-500 ease-in-out"
+              >
+                Request Access
               </Button>
             </div>
           </div>
-          {/* <div className="p-5">
-            <div className="flex items-center justify-center">
-              <label className="block">
-                <span className="sr-only">Choose profile photo</span>
-                <input
-                  type="file"
-                  className="block w-full text-sm text-gray-500
-          file:mr-4 file:py-2 file:px-4
-          file:rounded-full file:border-0
-          file:text-sm file:font-semibold
-          file:bg-basiraGreen file:text-black
-          hover:file:bg-basiraGreen-darker
-          cursor-pointer"
-                  style={{ transition: "background-color 0.2s" }}
-                />
-              </label>
-            </div>
-          </div> */}
-
-          <Typography className="my-4 lg:mb-16 max-w-3xl text-white text-xs lg:text-sm font-medium">
-            We will open 15 seats on αlpha release.
+          <Typography className="my-6 mb-10 text-white text-sm md:text-base lg:text-lg xl:text-xl">
+            We will open 10 seats on αlpha release.
           </Typography>
         </div>
       </div>

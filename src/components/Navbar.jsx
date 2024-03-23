@@ -81,6 +81,7 @@ export function NavbarFilled() {
 
         <div className="hidden lg:flex gap-8">
           <NavList />
+          {/* //TODO: Functionality to give access */}
           <Button className="h-10 hidden border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
             Request Access
           </Button>
@@ -101,6 +102,7 @@ export function NavbarFilled() {
       </div>
       <Collapse open={open}>
         <NavList />
+        {/* //TODO: Functionality to give access */}
         <Button className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
           Request Access
         </Button>
