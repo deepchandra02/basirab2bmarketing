@@ -63,28 +63,25 @@ export function NavbarFilled() {
   return (
     <Navbar
       fullWidth
-      className="sticky top-0 z-50 bg-black bg-opacity-100 border-none text-gold"
+      className="sticky top-0 z-50 px-4 md:px-8 bg-black bg-opacity-100 border-none text-gold"
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto lg:my-2 flex items-center justify-between max-w-full">
         <div
           // TODO: Add homepage link
           className="flex gap-2 items-center"
         >
-          <img src={logo} alt="logo" className="h-8 lg:h-10" />
+          <img src={logo} alt="logo" className="h-8 lg:h-10 xl:h-12" />
           <Typography
             href="#"
-            className="mr-4 text-xs lg:text-2xl font-semibold cursor-pointer"
+            className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer"
           >
             Basira
           </Typography>
         </div>
 
-        <div className="hidden lg:flex gap-16">
+        <div className="hidden lg:flex gap-8">
           <NavList />
-          <Button
-            size="md"
-            className="hidden border border-gold bg-transparent text-gold hover:text-black hover:bg-gold lg:inline-block"
-          >
+          <Button className="h-10 hidden border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
             Request Access
           </Button>
         </div>
@@ -104,8 +101,8 @@ export function NavbarFilled() {
       </div>
       <Collapse open={open}>
         <NavList />
-        <Button color="white" size="sm" fullWidth className="mb-2">
-          Buy Now
+        <Button className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
+          Request Access
         </Button>
       </Collapse>
     </Navbar>

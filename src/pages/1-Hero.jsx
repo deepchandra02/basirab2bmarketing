@@ -4,18 +4,30 @@ import herobg from "../assets/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-black">
-      <div className="grid min-h-[85vh] px-8">
-        <div className="container my-8 mx-auto grid place-items-center text-center">
+    <div className="bg-black text-gold min-h-screen">
+      <div className="grid">
+        <div className="container mt-8 md:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
           <Typography
             variant="h1"
-            className="text-3xl !leading-snug lg:text-5xl xl:text-6xl text-text"
+            className="text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug"
           >
-            Sales-driven, empathic <br /> AI Waiter
+            Emotionally Intelligent <br /> AI Waiter
+          </Typography>
+        </div>
+
+        <div className="container my-4 grid gap-y-5 mx-auto md:hidden place-items-center text-center">
+          <Typography variant="h4" className="text-6xl sm:text-7xl">
+            Emotionally
+          </Typography>
+          <Typography variant="h4" className="text-6xl sm:text-7xl">
+            Intelligent
+          </Typography>
+          <Typography variant="h4" className="text-4xl sm:text-5xl">
+            AI Waiter
           </Typography>
         </div>
         <div
-          className="lg:min-h-[60vh] bg-contain bg-center bg-no-repeat"
+          className="h-[50em] -mt-24 md:h-[65em] lg:mt-0 xl:h-[90em] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${herobg})` }}
         ></div>
         <div className="container my-auto mx-auto grid place-items-center text-center">
