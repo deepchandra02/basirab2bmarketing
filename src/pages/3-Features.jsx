@@ -8,25 +8,25 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import heroChart from "../assets/hero/hero_chart.png";
+import card1 from "../assets/features/card1.png";
+import card2 from "../assets/features/card2.png";
+import card3 from "../assets/features/card3.png";
 
-function ContentCard({ img, title, desc, details }) {
+function ContentCard({ img, title, desc }) {
   return (
-    <Card shadow={true} className="min-w-96">
+    <Card shadow={true} className="w-62">
       <CardHeader
         shadow={false}
-        color="blue-gray"
-        className="mt-5 relative h-52"
+        color="white"
+        className="mt-5 relative items-center"
       >
-        <img src={img} alt="" />
+        <img
+          src={img}
+          alt=""
+          className="object-cover object-center h-60 mx-auto"
+        />
       </CardHeader>
       <CardBody>
-        <Typography
-          variant="small"
-          className="mb-3 !font-normal !text-gray-500"
-        >
-          {details}
-        </Typography>
         <Typography
           as="a"
           href="#"
@@ -39,9 +39,6 @@ function ContentCard({ img, title, desc, details }) {
         <Typography className="mb-5 !text-base !font-normal !text-gray-500">
           {desc}
         </Typography>
-        <Button color="gray" variant="outlined">
-          from/night
-        </Button>
       </CardBody>
     </Card>
   );
@@ -49,40 +46,24 @@ function ContentCard({ img, title, desc, details }) {
 
 const contents = [
   {
-    img: heroChart,
-    title: "Lovely and cozy apartment",
-    details: "Entire Apartment • 3 Guests • 2 Beds",
-    desc: "Siri's latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward.",
+    img: card1,
+    title: "Recommendations for guests",
+    desc: "High-margin menu item recommendations based on customers' demographics, preferences, allergies, frequency and time of visits, customer feedback, and special requests.",
   },
   {
-    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog2.jpg",
-    title: "Single details in the center of city",
-    details: "Private details • 1 Guests • 1 Sofa",
-    desc: "As Uber works through a huge amount of internal management turmoil, the company is also consolidating more of its international business.",
+    img: card2,
+    title: "Demand analytics and forecasting",
+    desc: "Forecasting based on consumer behavior information (time of ordering specific meals) which allows to order and prepare food in advance. Full analytics for hourly, daily, weekly, and monthly operations.",
   },
   {
-    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog3.jpg",
-    title: "Independent house beddetails",
-    details: "Entire Apartment • 4 Guests • 2 Beds",
-    desc: "Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music.",
+    img: card3,
+    title: "Menu Customization",
+    desc: "Data-driven menu customization based on guests requests: food choices and rating, adjust the menu to meet the demand and follow the trends.",
   },
   {
-    img: heroChart,
-    title: "Lovely and cozy apartment",
-    details: "Entire Apartment • 3 Guests • 2 Beds",
-    desc: "Siri's latest trick is offering a hands-free TV viewing experience, that will allow consumers to turn on or off their television, change inputs, fast forward.",
-  },
-  {
-    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog2.jpg",
-    title: "Single details in the center of city",
-    details: "Private details • 1 Guests • 1 Sofa",
-    desc: "As Uber works through a huge amount of internal management turmoil, the company is also consolidating more of its international business.",
-  },
-  {
-    img: "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog3.jpg",
-    title: "Independent house beddetails",
-    details: "Entire Apartment • 4 Guests • 2 Beds",
-    desc: "Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music.",
+    img: card2,
+    title: "Recommendations for guests",
+    desc: "High-margin menu item recommendations based on customers' demographics, preferences, allergies, frequency and time of visits, customer feedback, and special requests.",
   },
 ];
 
