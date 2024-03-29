@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// @type {import('tailwindcss').Config}
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
@@ -6,12 +6,17 @@ module.exports = withMT({
   theme: {
     extend: {
       animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        marquee: "marquee 20s linear infinite",
+        marquee2: "marquee2 20s linear infinite",
       },
       keyframes: {
-        "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
       fontFamily: {

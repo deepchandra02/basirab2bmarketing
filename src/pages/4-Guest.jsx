@@ -6,7 +6,7 @@ export function ContentCard({ title, description, image, className }) {
   return (
     <Card shadow={false} className={className}>
       <CardBody className="flex h-full flex-col rounded-2xl bg-[#F3F2ED] p-10">
-        <Typography variant="h3" className="text-gold text-center mb-6">
+        <Typography className="text-gold text-center mb-6 text-2xl lg:text-3xl font-semibold">
           {title}
         </Typography>
         {image && (
