@@ -70,7 +70,7 @@ export function NavbarFilled() {
           // TODO: Add homepage link
           className="flex gap-2 items-center"
         >
-          <img src={logo} alt="logo" className="h-8 lg:h-10 xl:h-12" />
+          <img src={logo} alt="logo" className="h-8 lg:h-10 2xl:h-12" />
           <Typography
             href="#"
             className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer"

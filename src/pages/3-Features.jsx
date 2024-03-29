@@ -105,8 +105,8 @@ function Features() {
   };
 
   return (
-    <div className="p-8">
-      <div className="grid max-w-[1200px] mx-auto">
+    <div className="p-4 md:p-8">
+      <div className="grid max-w-[1170px] mx-auto">
         <div className="flex justify-start gap-x-8 my-4">
           <Typography className="text-4xl font-bold" color="black">
             Features
@@ -132,6 +132,7 @@ function Features() {
         </div>
         <div
           ref={scrollContainerRef}
+          // TODO: Add listener to change button states if user scrolls the cards without the buttons
           className="flex overflow-x-auto no-scrollbar space-x-4 py-2"
         >
           {contents.map(({ img, title, desc, details }) => (
