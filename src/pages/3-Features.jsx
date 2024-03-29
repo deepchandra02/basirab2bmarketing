@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { IconButton } from "@material-tailwind/react";
 import {
   Card,
@@ -11,9 +11,9 @@ import card1 from "../assets/features/card1.png";
 import card2 from "../assets/features/card2.png";
 import card3 from "../assets/features/card3.png";
 
-function ContentCard({ img, title, desc }) {
+function ContentCard({ img, title, desc, className }) {
   return (
-    <Card shadow={true} className="bg-body min-w-72 rounded-3xl">
+    <Card shadow={true} className={`bg-body min-w-72 rounded-3xl ${className}`}>
       <CardHeader shadow={false} className="bg-body mt-5 relative items-center">
         <img src={img} alt="" className="mx-auto h-60" />
       </CardHeader>
@@ -63,7 +63,34 @@ function Features() {
   const [atInitial, setAtInitial] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
 
-  let scrollAmount = 300; // Adjust the scroll amount as needed
+  let scrollAmount = 300;
+
+  useEffect(() => {
+    const checkScrollPosition = () => {
+      if (!scrollContainerRef.current) return;
+
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      const maxScrollLeft = scrollWidth - clientWidth;
+
+      setAtInitial(scrollLeft <= 0);
+      setAtEnd(scrollLeft >= maxScrollLeft - 1); // A tolerance of 1px to ensure reliability across browsers
+    };
+
+    // Initial check in case the content is not fully loaded
+    checkScrollPosition();
+
+    // Add event listener for scroll events
+    const scrollContainer = scrollContainerRef.current;
+    scrollContainer.addEventListener("scroll", checkScrollPosition, {
+      passive: true,
+    });
+
+    // Clean up event listener on component unmount
+    return () => {
+      scrollContainer.removeEventListener("scroll", checkScrollPosition);
+    };
+  }, []); // Empty dependency array means this effect runs only once after the initial render
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -113,18 +140,22 @@ function Features() {
           </Typography>
           <div className="flex w-max gap-4">
             <IconButton
+              disabled={atInitial}
               onClick={scrollLeft}
               variant={atInitial ? "outlined" : "filled"}
               ripple={true}
-              className={"rounded-full"}
+              className={`rounded-full ${
+                atInitial ? "cursor-not-allowed" : ""
+              }`}
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </IconButton>
             <IconButton
+              disabled={atEnd}
               onClick={scrollRight}
               variant={atEnd ? "outlined" : "filled"}
               ripple={true}
-              className="rounded-full"
+              className={`rounded-full ${atEnd ? "cursor-not-allowed" : ""}`}
             >
               <ChevronRightIcon className="w-6 h-6" />
             </IconButton>
@@ -133,7 +164,7 @@ function Features() {
         <div
           ref={scrollContainerRef}
           // TODO: Add listener to change button states if user scrolls the cards without the buttons
-          className="flex overflow-x-auto no-scrollbar space-x-4 py-2"
+          className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar space-x-4 py-2"
         >
           {contents.map(({ img, title, desc, details }) => (
             <ContentCard
@@ -142,6 +173,7 @@ function Features() {
               img={img}
               title={title}
               desc={desc}
+              className="snap-start"
             />
           ))}
         </div>
