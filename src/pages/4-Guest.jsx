@@ -34,8 +34,8 @@ const Contents = [
 
 function Guest() {
   return (
-    <div className="p-8">
-      <div className="grid max-w-[1200px] mx-auto">
+    <div className="p-4 md:p-8">
+      <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
           <Typography variant="h2" color="black" className="font-bold">
             As a guest, you get <text className="text-gold">fast</text> and

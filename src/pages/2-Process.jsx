@@ -5,9 +5,9 @@ import note_taking from "../assets/process/card3.png";
 
 function Process() {
   return (
-    <div className="p-2">
-      <div className="grid max-w-[1200px] mx-auto">
-        <div className="text-center mx-2 mb-10 mt-24 lg:mb-16">
+    <div className="p-4 md:p-8">
+      <div className="grid max-w-[1170px] mx-auto">
+        <div className="text-center mx-2 mb-10 mt-10 lg:mb-16">
           <Typography
             color="black"
             className="font-bold leading-tight text-4xl lg:text-5xl"

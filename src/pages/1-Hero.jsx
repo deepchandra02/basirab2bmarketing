@@ -8,7 +8,7 @@ function Hero() {
     <div className="bg-black2 text-gold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
       <div className="grid">
         <div className="container mt-8 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
-          <Typography className="font-semibold text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug">
+          <Typography className="font-semibold text-6xl lg:text-7xl 2xl:text-8xl text-text !leading-snug">
             Emotionally Intelligent <br /> AI Waiter
           </Typography>
         </div>
@@ -26,12 +26,12 @@ function Hero() {
         </div>
 
         {/* <div
-          className="h-[50em] -mt-24 md:-mt-32 md:h-[65em] xl:h-[90em] bg-cover bg-center bg-no-repeat"
+          className="h-[50em] -mt-24 md:-mt-32 md:h-[65em] 2xl:h-[90em] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${herobg})` }}
         ></div>
         <div className="container -mt-36 md:-mt-52 lg:-mt-24 mx-auto grid place-items-center text-center px-4"> */}
         <div
-          className="h-[28em] mt-10 md:h-[35em] xl:h-[90em] bg-cover bg-center bg-no-repeat"
+          className="h-[28em] mt-10 md:h-[35em] lg:h-[40em] xl:h-[50em] 2xl:h-[70em] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${herobg})` }}
         ></div>
         <div className="container mt-10 md:mt-16 mx-auto grid place-items-center text-center px-4">
@@ -50,7 +50,7 @@ function Hero() {
               </Button>
             </div>
           </div>
-          <Typography className="my-6 mb-12 text-white text-sm md:text-base lg:text-lg xl:text-xl">
+          <Typography className="my-6 mb-12 text-white text-sm md:text-base lg:text-lg 2xl:text-xl">
             We will open 10 seats on αlpha release.
           </Typography>
         </div>
