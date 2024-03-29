@@ -1,11 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { IconButton } from "@material-tailwind/react";
 import {
   Card,
   CardHeader,
   CardBody,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import card1 from "../assets/features/card1.png";
@@ -14,17 +13,9 @@ import card3 from "../assets/features/card3.png";
 
 function ContentCard({ img, title, desc }) {
   return (
-    <Card shadow={true} className="w-62">
-      <CardHeader
-        shadow={false}
-        color="white"
-        className="mt-5 relative items-center"
-      >
-        <img
-          src={img}
-          alt=""
-          className="object-cover object-center h-60 mx-auto"
-        />
+    <Card shadow={true} className="bg-body min-w-72 rounded-3xl">
+      <CardHeader shadow={false} className="bg-body mt-5 relative items-center">
+        <img src={img} alt="" className="mx-auto h-60" />
       </CardHeader>
       <CardBody>
         <Typography
@@ -61,38 +52,61 @@ const contents = [
     desc: "Data-driven menu customization based on guests requests: food choices and rating, adjust the menu to meet the demand and follow the trends.",
   },
   {
-    img: card2,
-    title: "Recommendations for guests",
-    desc: "High-margin menu item recommendations based on customers' demographics, preferences, allergies, frequency and time of visits, customer feedback, and special requests.",
+    img: {},
+    title: "Online Orders",
+    desc: "Online order management with special notes and notifications with the ability to modify the order in minutes. We reduce orders made by mistake.",
   },
 ];
 
 function Features() {
   const scrollContainerRef = useRef(null);
+  const [atInitial, setAtInitial] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
 
-  const scrollAmount = 300; // Adjust the scroll amount as needed
+  let scrollAmount = 300; // Adjust the scroll amount as needed
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
+      const maxScrollLeft =
+        scrollContainerRef.current.scrollWidth -
+        scrollContainerRef.current.clientWidth;
+      console.log(maxScrollLeft);
       scrollContainerRef.current.scrollBy({
         left: -scrollAmount,
         behavior: "smooth",
       });
+      setAtEnd(false);
+      if (scrollContainerRef.current.scrollLeft <= scrollAmount) {
+        setAtInitial(true);
+      }
     }
+    console.log(scrollContainerRef.current.scrollLeft);
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
+      const maxScrollLeft =
+        scrollContainerRef.current.scrollWidth -
+        scrollContainerRef.current.clientWidth;
+      console.log(maxScrollLeft);
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth",
       });
+      setAtInitial(false);
+      if (
+        maxScrollLeft - scrollContainerRef.current.scrollLeft <
+        scrollAmount
+      ) {
+        setAtEnd(true);
+      }
     }
+    console.log(scrollContainerRef.current.scrollLeft);
   };
 
   return (
     <div className="p-8">
-      <div className="grid max-w-screen-lg mx-auto">
+      <div className="grid max-w-[1200px] mx-auto">
         <div className="flex justify-start gap-x-8 my-4">
           <Typography className="text-4xl font-bold" color="black">
             Features
@@ -100,15 +114,15 @@ function Features() {
           <div className="flex w-max gap-4">
             <IconButton
               onClick={scrollLeft}
-              variant="outlined"
+              variant={atInitial ? "outlined" : "filled"}
               ripple={true}
-              className="rounded-full"
+              className={"rounded-full"}
             >
               <ChevronLeftIcon className="w-6 h-6" />
             </IconButton>
             <IconButton
               onClick={scrollRight}
-              variant="outlined"
+              variant={atEnd ? "outlined" : "filled"}
               ripple={true}
               className="rounded-full"
             >
@@ -118,7 +132,7 @@ function Features() {
         </div>
         <div
           ref={scrollContainerRef}
-          className="flex overflow-x-auto no-scrollbar space-x-4"
+          className="flex overflow-x-auto no-scrollbar space-x-4 py-2"
         >
           {contents.map(({ img, title, desc, details }) => (
             <ContentCard

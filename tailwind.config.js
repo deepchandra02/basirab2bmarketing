@@ -6,32 +6,48 @@ module.exports = withMT({
   theme: {
     extend: {
       animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
       keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        }
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "Noto Sans",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
       },
       colors: {
-        body: '#EBE7E6',
-        gold: '#E1CC7B'
+        body: "#EBE7E6",
+        gold: "#E1CC7B",
       },
       screens: {
-        'sm': '640px',
+        sm: "640px",
         // => @media (min-width: 640px) { ... }
 
-        'md': '768px',
+        md: "768px",
         // => @media (min-width: 768px) { ... }
 
-        'lg': '1440px',
+        lg: "1360px",
         // => @media (min-width: 1024px) { ... }
 
-        'xl': '1780px',
+        xl: "1780px",
       },
     },
   },
