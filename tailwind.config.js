@@ -35,7 +35,7 @@ module.exports = withMT({
       },
       colors: {
         body: "#EBE7E6",
-        gold: "#E1CC7B",
+        gold: "#C09E3B",
       },
       screens: {
         sm: "640px",

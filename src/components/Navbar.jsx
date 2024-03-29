@@ -65,7 +65,7 @@ export function NavbarFilled() {
       fullWidth
       className="sticky top-0 z-50 px-4 md:px-8 bg-black bg-opacity-100 border-none text-gold"
     >
-      <div className="container mx-auto lg:my-2 flex items-center justify-between max-w-full">
+      <div className="container mx-auto flex items-center justify-between max-w-full">
         <div
           // TODO: Add homepage link
           className="flex gap-2 items-center"
