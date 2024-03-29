@@ -1,58 +1,51 @@
-import { Typography, Card, CardBody } from "@material-tailwind/react";
-import phone1 from "../assets/guest/iphone1.png";
-import phone2 from "../assets/guest/iphone2.png";
-
-export function ContentCard({ title, description, image, className }) {
-  return (
-    <Card shadow={false} className={className}>
-      <CardBody className="flex h-full flex-col rounded-2xl bg-[#F3F2ED] p-10">
-        <Typography variant="h3" className="text-gold text-center mb-6">
-          {title}
-        </Typography>
-        {image && (
-          <img src={image} alt={title} className="mx-auto h-96 rounded-lg" />
-        )}
-      </CardBody>
-    </Card>
-  );
-}
-
-const Contents = [
-  {
-    title: "Scan, Talk, Order ",
-    // description:
-    //   "Forget about the cluttered mailbox. Send there what you already liked",
-    image: phone1,
-  },
-  {
-    title: "Save your preferences",
-    // description:
-    //   "Get pitches based on the beats you choose. Switch to idle while on vacation",
-    image: phone2,
-  },
-];
+import React from "react";
+import { Typography } from "@material-tailwind/react";
 
 function Form() {
   return (
-    <div className="p-8">
+    <div className="bg-black2 p-4 md:p-8 min-h-screen">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
-          <Typography variant="h2" color="black" className="font-bold">
-            As a guest, you get <text className="text-gold">fast</text> and
-            <text className="text-gold"> personalized</text> <br /> services
-            catering to your preferences and health needs
+          <Typography
+            variant="paragraph"
+            className="font-medium max-w-[900px] mx-auto text-[#C09E3B] mb-10"
+          >
+            We know – diving into AI might seem like a big step. That's why we
+            offer a free 1-on-1 session where you can see Basira AI in action.
+            No commitment, just your questions answered and a clear
+            demonstration of how it can work for your restaurant.
+          </Typography>
+          <Typography variant="h2" className="font-medium text-[#EAEBE6]">
+            Witness the results firsthand and
+          </Typography>
+          <Typography variant="h2" className="font-bold text-[#EAEBE6]">
+            be the first to adapt to
+            <text class="bg-gradient-to-r from-[#C09E3B] to-[#FFFFFF] bg-clip-text text-transparent">
+              {" "}
+              the tech <br />
+              change
+            </text>
           </Typography>
         </div>
-        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 mb-6">
-          {Contents.map(({ title, description, image }, key) => (
-            <ContentCard
-              key={key}
-              title={title}
-              description={description}
-              image={image}
-              className="rounded-3xl"
-            />
-          ))}
+        <div class="max-w-[800px] mx-auto text-[#EAEBE6] relative flex overflow-x-hidden">
+          <div class="animate-marquee whitespace-nowrap">
+            <span class="mx-4 ">Stay ahead of your competition</span>
+            <span class="mx-4 ">Start for free</span>
+            <span class="mx-4 ">Customise your style</span>
+            <span class="mx-4 ">Efficiency meets excellence here!</span>
+            <span class="mx-4 ">Elevate Dining with AI Waiter Tech!</span>
+          </div>
+          <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
+            <span class="mx-4 ">Stay ahead of your competition</span>
+            <span class="mx-4 ">Start for free</span>
+            <span class="mx-4 ">Customise your style</span>
+            <span class="mx-4 ">Efficiency meets excellence here!</span>
+            <span class="mx-4 ">Elevate Dining with AI Waiter Tech!</span>
+          </div>
+          {/* <!-- Left Gradient Overlay --> */}
+          <div class="absolute left-0 top-0 bottom-0 w-56 bg-gradient-to-r from-black2 via-transparent"></div>
+          {/* <!-- Right Gradient Overlay --> */}
+          <div class="absolute right-0 top-0 bottom-0 w-56 bg-gradient-to-l from-black2 via-transparent"></div>
         </div>
       </div>
     </div>
