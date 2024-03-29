@@ -4,7 +4,7 @@ import herobg from "../assets/hero/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-black text-gold lg:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
+    <div className="bg-black2 text-gold lg:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
       <div className="grid">
         <div className="container mt-8 md:mt-32 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
           <Typography className="font-extrabold text-6xl lg:text-7xl xl:text-8xl text-text !leading-snug">

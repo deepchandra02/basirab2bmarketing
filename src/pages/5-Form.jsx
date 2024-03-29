@@ -32,7 +32,7 @@ const Contents = [
   },
 ];
 
-function Guest() {
+function Form() {
   return (
     <div className="p-8">
       <div className="grid max-w-[1200px] mx-auto">
@@ -59,4 +59,4 @@ function Guest() {
   );
 }
 
-export default Guest;
+export default Form;
