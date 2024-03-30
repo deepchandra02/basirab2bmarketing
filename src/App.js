@@ -1,4 +1,3 @@
-import "./App.css";
 import NavbarFilled from "./components/Navbar";
 import Hero from "./pages/1-Hero";
 import Process from "./pages/2-Process";

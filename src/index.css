@@ -10,3 +10,44 @@
   -ms-overflow-style: none; /* for IE and Edge */
   scrollbar-width: none; /* for Firefox */
 }
+
+.custom-button {
+  flex-shrink: 0;
+  border-radius: 76px;
+  border: 3px solid rgba(252, 242, 207, 0.44);
+  background: linear-gradient(
+    307deg,
+    #4f7b17 8.66%,
+    #3c5913 13.9%,
+    #2f4010 20.58%,
+    #1c210b 31.55%,
+    #110f08 57.29%,
+    #4d4526 80.18%,
+    #877945 95.44%,
+    #f0d87c 104.02%
+  );
+}
+
+/* Custom CSS for the button shine effect */
+.custom-button:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: all 0.5s;
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  to {
+    left: 125%;
+  }
+}
