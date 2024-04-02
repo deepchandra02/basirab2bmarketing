@@ -7,7 +7,7 @@ function Form() {
     <div className="bg-black2 p-4 md:p-8 min-h-screen overflow-x-hidden">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
-          <Typography
+          {/* <Typography
             variant="paragraph"
             className="font-medium max-w-[900px] mx-auto text-[#C09E3B] mb-10"
           >
@@ -15,8 +15,8 @@ function Form() {
             offer a free 1-on-1 session where you can see Basira AI in action.
             No commitment, just your questions answered and a clear
             demonstration of how it can work for your restaurant.
-          </Typography>
-          <Typography className="text-4xl md:text-6xl font-medium text-[#EAEBE6]">
+          </Typography> */}
+          <Typography className="text-4xl md:text-6xl font-light text-[#EAEBE6]">
             Witness the results firsthand and
           </Typography>
           <Typography className="text-4xl md:text-6xl font-bold text-[#EAEBE6]">
