@@ -5,7 +5,7 @@ import herobg from "../assets/hero/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-black2 text-gold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
+    <div className="bg-black2 text-lightgold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
       <div className="grid">
         <div className="container mt-8 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
           <Typography className="font-semibold text-6xl lg:text-7xl 2xl:text-8xl text-text !leading-snug">
@@ -25,11 +25,6 @@ function Hero() {
           </Typography>
         </div>
 
-        {/* <div
-          className="h-[50em] -mt-24 md:-mt-32 md:h-[65em] 2xl:h-[90em] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${herobg})` }}
-        ></div>
-        <div className="container -mt-36 md:-mt-52 lg:-mt-24 mx-auto grid place-items-center text-center px-4"> */}
         <div
           className="h-[28em] mt-10 md:h-[35em] lg:h-[40em] xl:h-[50em] 2xl:h-[70em] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${herobg})` }}
@@ -44,7 +39,7 @@ function Hero() {
             <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
               <Button
                 size="lg"
-                className="border border-gold hover:bg-gold hover:text-black text-gold bg-transparent transition duration-500 ease-in-out"
+                className="border border-lightgold hover:bg-lightgold hover:text-black text-lightgold bg-transparent transition duration-500 ease-in-out"
               >
                 Request Access
               </Button>

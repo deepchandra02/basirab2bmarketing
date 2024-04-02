@@ -63,7 +63,7 @@ export function NavbarFilled() {
   return (
     <Navbar
       fullWidth
-      className="sticky top-0 z-50 px-4 md:px-8 bg-black2 bg-opacity-100 border-none text-gold"
+      className="sticky top-0 z-50 px-4 md:px-8 bg-black2 bg-opacity-100 border-none text-lightgold"
     >
       <div className="container mx-auto flex items-center justify-between max-w-full">
         <div
@@ -82,7 +82,7 @@ export function NavbarFilled() {
         <div className="hidden lg:flex gap-8">
           <NavList />
           {/* //TODO: Functionality to give access */}
-          <Button className="h-10 border border-gold bg-gold text-black hover:text-gold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none">
+          <Button className="h-10 border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none">
             Request Access
           </Button>
         </div>
@@ -103,7 +103,7 @@ export function NavbarFilled() {
       <Collapse open={open}>
         <NavList />
         {/* //TODO: Functionality to give access */}
-        <Button className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
+        <Button className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
           Request Access
         </Button>
       </Collapse>

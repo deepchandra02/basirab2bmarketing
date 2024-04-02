@@ -6,7 +6,7 @@ export function ContentCard({ title, description, image, className }) {
   return (
     <Card shadow={false} className={className}>
       <CardBody className="flex h-full flex-col rounded-2xl bg-[#F3F2ED] p-10">
-        <Typography className="text-gold text-center mb-6 text-2xl lg:text-3xl font-semibold">
+        <Typography className="text-darkgold text-center mb-6 text-2xl lg:text-3xl font-semibold">
           {title}
         </Typography>
         {image && (
@@ -25,7 +25,7 @@ const Contents = [
     image: phone1,
   },
   {
-    title: "Save your preferences",
+    title: "Save Preferences",
     // description:
     //   "Get pitches based on the beats you choose. Switch to idle while on vacation",
     image: phone2,
@@ -37,10 +37,25 @@ function Guest() {
     <div className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
-          <Typography variant="h2" color="black" className="font-bold">
-            As a guest, you get <text className="text-gold">fast</text> and
-            <text className="text-gold"> personalized</text> <br /> services
-            catering to your preferences and health needs
+          <Typography
+            color="black"
+            className="font-bold leading-tight text-4xl lg:text-5xl hidden sm:inline-block"
+          >
+            Provide your <text className="text-darkgold">guests</text> swift and
+            personalized <br /> services tuned to their preferences and health
+            needs
+          </Typography>
+          <Typography
+            color="black"
+            className="font-bold leading-tight text-4xl sm:hidden"
+          >
+            Provide your{" "}
+            <text className="text-darkgold">
+              {" "}
+              guests <br />
+            </text>{" "}
+            swift and personalized services tuned to their preferences and
+            health needs
           </Typography>
         </div>
         <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 mb-6">

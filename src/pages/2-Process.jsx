@@ -30,7 +30,7 @@ function Process() {
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-lightgold text-xl lg:text-2xl font-bold"
               >
                 Fill your restaurant's profile <br /> under 30 mins
               </Typography>
@@ -43,7 +43,7 @@ function Process() {
               <img src={cards} alt="restaurant profile form" />
               <Button
                 size="lg"
-                className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent transition duration-500 ease-in-out"
+                className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out"
               >
                 Request Access
               </Button>
@@ -53,7 +53,7 @@ function Process() {
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-darkgold text-xl lg:text-2xl font-bold"
               >
                 Customise AI to meet your needs
               </Typography>
@@ -73,7 +73,7 @@ function Process() {
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-darkgold text-xl lg:text-2xl font-bold"
               >
                 Get a new tireless employee - AI Waiter
               </Typography>
