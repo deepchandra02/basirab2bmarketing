@@ -41,18 +41,18 @@ function Guest() {
             color="black"
             className="font-bold leading-tight text-4xl lg:text-5xl hidden sm:inline-block"
           >
-            Provide your <text className="text-darkgold">guests</text> swift and
-            personalized <br /> services tuned to their preferences and health
-            needs
+            <text className="bg-gradient-to-r from-black to-darkgold bg-clip-text text-transparent">
+              Provide your guests
+            </text>{" "}
+            swift and personalized <br /> services tuned to their preferences
+            and health needs
           </Typography>
           <Typography
             color="black"
             className="font-bold leading-tight text-4xl sm:hidden"
           >
-            Provide your{" "}
-            <text className="text-darkgold">
-              {" "}
-              guests <br />
+            <text className="bg-gradient-to-r from-black to-darkgold bg-clip-text text-transparent">
+              Provide your guests <br />
             </text>{" "}
             swift and personalized services tuned to their preferences and
             health needs
