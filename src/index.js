@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
 import { ThemeProvider } from "@material-tailwind/react";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -19,13 +18,13 @@ const firebaseConfig = {
   storageBucket: "basirab2bmarketing.appspot.com",
   messagingSenderId: "689227499532",
   appId: "1:689227499532:web:aa4255e4c28a3456870629",
-  measurementId: "G-F3QJH1E0W5"
+  measurementId: "G-F3QJH1E0W5",
 };
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider>

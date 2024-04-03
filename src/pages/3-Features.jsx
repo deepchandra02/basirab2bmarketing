@@ -13,14 +13,18 @@ import card3 from "../assets/features/card3.png";
 
 function ContentCard({ img, title, desc, className }) {
   return (
-    <Card shadow={true} className={`bg-body min-w-72 rounded-3xl ${className}`}>
-      <CardHeader shadow={false} className="bg-body mt-5 relative items-center">
+    <Card
+      shadow={true}
+      className={`bg-[#F3F2ED] min-w-72 rounded-3xl ${className}`}
+    >
+      <CardHeader
+        shadow={false}
+        className="bg-[#F3F2ED] mt-5 relative items-center"
+      >
         <img src={img} alt="" className="mx-auto h-60" />
       </CardHeader>
       <CardBody>
         <Typography
-          as="a"
-          href="#"
           variant="h5"
           color="blue-gray"
           className="mb-3 normal-case transition-colors hover:text-gray-700"
@@ -132,10 +136,10 @@ function Features() {
   };
 
   return (
-    <div className="p-4 md:p-8">
+    <div id="features" className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="flex justify-start gap-x-8 my-4">
-          <Typography className="text-4xl font-bold" color="black">
+          <Typography className="text-4xl lg:text-5xl font-bold" color="black">
             Features
           </Typography>
           <div className="flex w-max gap-4">
@@ -163,7 +167,6 @@ function Features() {
         </div>
         <div
           ref={scrollContainerRef}
-          // TODO: Add listener to change button states if user scrolls the cards without the buttons
           className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar space-x-4 py-2"
         >
           {contents.map(({ img, title, desc, details }) => (

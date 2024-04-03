@@ -1,11 +1,10 @@
 import { Typography, Button, Card, CardBody } from "@material-tailwind/react";
 import cards from "../assets/process/card1.png";
-// import restaurant from "../assets/process/card2.png";
 import note_taking from "../assets/process/card3.png";
 
 function Process() {
   return (
-    <div className="p-4 md:p-8">
+    <div id="process" className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center mx-2 mb-10 mt-10 lg:mb-16">
           <Typography
@@ -25,12 +24,12 @@ function Process() {
             </text>
           </Typography>
         </div>
-        <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:grid-rows-2">
+        <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-2 lg:grid-rows-2">
           <Card shadow={false} className="md:row-span-2 bg-black">
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-lightgold text-xl lg:text-2xl font-bold"
               >
                 Fill your restaurant's profile <br /> under 30 mins
               </Typography>
@@ -43,7 +42,7 @@ function Process() {
               <img src={cards} alt="restaurant profile form" />
               <Button
                 size="lg"
-                className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent transition duration-500 ease-in-out"
+                className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out"
               >
                 Request Access
               </Button>
@@ -53,7 +52,7 @@ function Process() {
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-darkgold text-xl text-center md:text-left lg:text-2xl font-bold"
               >
                 Customise AI to meet your needs
               </Typography>
@@ -73,7 +72,7 @@ function Process() {
             <CardBody className="flex h-full flex-col space-y-4 rounded-2xl p-8">
               <Typography
                 variant="h3"
-                className="text-gold text-xl lg:text-2xl font-bold"
+                className="text-darkgold text-xl lg:text-2xl text-center md:text-left font-bold"
               >
                 Get a new tireless employee - AI Waiter
               </Typography>

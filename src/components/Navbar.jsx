@@ -7,45 +7,23 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-// import {
-//   Square3Stack3DIcon,
-//   UserCircleIcon,
-//   PuzzlePieceIcon,
-//   CodeBracketSquareIcon,
-// } from "@heroicons/react/24/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
+import { Link } from "react-scroll";
 
-function NavItem({ icon, label }) {
+function NavItem({ icon, label, to, offset, onClick }) {
   return (
-    <a href="#">
-      <Typography className="flex items-center gap-1.5 p-1 font-medium lg:text-xl">
-        {icon}
-        {label}
-      </Typography>
-    </a>
-  );
-}
-
-function NavList() {
-  return (
-    <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
-      <NavItem
-        //TODO: Add icon
-        // icon={<Square3Stack3DIcon className="h-5 w-5" />}
-        label="Process"
-      />
-      <NavItem
-        //TODO: Add icon
-        // icon={<UserCircleIcon className="h-5 w-5" />}
-        label="Features"
-      />
-      <NavItem
-        //TODO: Add icon
-        // icon={<PuzzlePieceIcon className="h-5 w-5" />}
-        label="Guest"
-      />
-    </ul>
+    <Link
+      to={to}
+      smooth={true}
+      duration={500}
+      offset={offset}
+      onClick={onClick}
+      className="cursor-pointer flex items-center gap-1.5 p-1 font-medium lg:text-xl"
+    >
+      {icon}
+      {label}
+    </Link>
   );
 }
 
@@ -63,26 +41,29 @@ export function NavbarFilled() {
   return (
     <Navbar
       fullWidth
-      className="sticky top-0 z-50 px-4 md:px-8 bg-black2 bg-opacity-100 border-none text-gold"
+      className="sticky top-0 z-50 px-4 md:px-8 bg-black2 bg-opacity-100 border-none text-lightgold"
     >
       <div className="container mx-auto flex items-center justify-between max-w-full">
-        <div
-          // TODO: Add homepage link
-          className="flex gap-2 items-center"
-        >
-          <img src={logo} alt="logo" className="h-8 lg:h-10 2xl:h-12" />
-          <Typography
-            href="#"
-            className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer"
-          >
-            Basira
-          </Typography>
-        </div>
+        <Link to="hero" smooth={true} duration={1000} offset={-200}>
+          <div className="flex gap-2 items-center">
+            <img src={logo} alt="logo" className="h-8 lg:h-10 2xl:h-12" />
+            <Typography
+              href="#"
+              className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer"
+            >
+              Basira
+            </Typography>
+          </div>
+        </Link>
 
         <div className="hidden lg:flex gap-8">
-          <NavList />
+          <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
+            <NavItem label="Process" to="process" offset={-70} />
+            <NavItem label="Features" to="features" offset={-80} />
+            <NavItem label="Guest" to="guest" offset={-70} />
+          </ul>
           {/* //TODO: Functionality to give access */}
-          <Button className="h-10 border border-gold bg-gold text-black hover:text-gold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none">
+          <Button className="h-10 border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none">
             Request Access
           </Button>
         </div>
@@ -101,9 +82,28 @@ export function NavbarFilled() {
         </IconButton>
       </div>
       <Collapse open={open}>
-        <NavList />
+        <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
+          <NavItem
+            label="Process"
+            to="process"
+            offset={-220}
+            onClick={() => setOpen(false)}
+          />
+          <NavItem
+            label="Features"
+            to="features"
+            offset={-250}
+            onClick={() => setOpen(false)}
+          />
+          <NavItem
+            label="Guest"
+            to="guest"
+            offset={-220}
+            onClick={() => setOpen(false)}
+          />
+        </ul>
         {/* //TODO: Functionality to give access */}
-        <Button className="border border-gold bg-gold text-black hover:text-gold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
+        <Button className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
           Request Access
         </Button>
       </Collapse>
