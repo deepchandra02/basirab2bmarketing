@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 function Form() {
   return (
     <div className="bg-black2 p-4 md:p-8 min-h-screen flex flex-col justify-between overflow-x-hidden">
-      <div className="grid max-w-[1170px]">
+      <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
           {/* <Typography
               variant="paragraph"
