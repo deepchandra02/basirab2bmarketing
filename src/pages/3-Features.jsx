@@ -136,7 +136,7 @@ function Features() {
   };
 
   return (
-    <div className="p-4 md:p-8">
+    <div id="features" className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="flex justify-start gap-x-8 my-4">
           <Typography className="text-4xl lg:text-5xl font-bold" color="black">

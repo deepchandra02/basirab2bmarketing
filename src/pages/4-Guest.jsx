@@ -6,7 +6,7 @@ export function ContentCard({ title, description, image, className }) {
   return (
     <Card shadow={false} className={className}>
       <CardBody className="flex h-full flex-col rounded-2xl bg-[#F3F2ED] p-10">
-        <Typography className="text-darkgold text-center mb-6 text-2xl lg:text-3xl font-semibold">
+        <Typography className="text-darkgold text-center mb-6 text-3xl font-semibold">
           {title}
         </Typography>
         {image && (
@@ -34,7 +34,7 @@ const Contents = [
 
 function Guest() {
   return (
-    <div className="p-4 md:p-8">
+    <div id="guest" className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
           <Typography

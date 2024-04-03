@@ -1,11 +1,10 @@
 import { Typography, Button, Card, CardBody } from "@material-tailwind/react";
 import cards from "../assets/process/card1.png";
-// import restaurant from "../assets/process/card2.png";
 import note_taking from "../assets/process/card3.png";
 
 function Process() {
   return (
-    <div className="p-4 md:p-8">
+    <div id="process" className="p-4 md:p-8">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center mx-2 mb-10 mt-10 lg:mb-16">
           <Typography

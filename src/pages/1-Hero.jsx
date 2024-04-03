@@ -5,7 +5,10 @@ import herobg from "../assets/hero/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-black2 text-lightgold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]">
+    <div
+      id="hero"
+      className="bg-black2 text-lightgold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]"
+    >
       <div className="grid">
         <div className="container mt-8 lg:mt-4 hidden lg:mb-8 mx-auto md:grid place-items-center text-center">
           <Typography className="font-semibold text-6xl lg:text-7xl 2xl:text-8xl text-text !leading-snug">
@@ -45,7 +48,7 @@ function Hero() {
               </Button>
             </div>
           </div>
-          <Typography className="my-6 mb-12 text-white text-sm md:text-base lg:text-lg 2xl:text-xl">
+          <Typography className="my-6 mb-10 text-white text-sm md:text-base lg:text-lg 2xl:text-xl">
             We will open 10 seats on αlpha release.
           </Typography>
         </div>
