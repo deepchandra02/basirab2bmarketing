@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import Footer from "../components/Footer";
 import { Button, Typography } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
