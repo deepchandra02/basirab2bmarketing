@@ -10,6 +10,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
+import AccessForm from "./AccessForm";
 
 function NavItem({ icon, label, to, offset, onClick }) {
   return (
@@ -31,6 +32,9 @@ export function NavbarFilled() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
+  const [openForm, setOpenForm] = React.useState(true);
+  const handleOpenForm = () => setOpenForm((cur) => !cur);
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -47,15 +51,11 @@ export function NavbarFilled() {
         <Link to="hero" smooth={true} duration={1000} offset={-200}>
           <div className="flex gap-2 items-center">
             <img src={logo} alt="logo" className="h-8 lg:h-10 2xl:h-12" />
-            <Typography
-              href="#"
-              className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer"
-            >
+            <Typography className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer">
               Basira
             </Typography>
           </div>
         </Link>
-
         <div className="hidden lg:flex gap-8">
           <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
             <NavItem label="Process" to="process" offset={-70} />
@@ -63,7 +63,10 @@ export function NavbarFilled() {
             <NavItem label="Guest" to="guest" offset={-70} />
           </ul>
           {/* //TODO: Functionality to give access */}
-          <Button className="h-10 border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none">
+          <Button
+            onClick={handleOpenForm}
+            className="h-10 border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none"
+          >
             Request Access
           </Button>
         </div>
@@ -103,10 +106,19 @@ export function NavbarFilled() {
           />
         </ul>
         {/* //TODO: Functionality to give access */}
-        <Button className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none">
+        <Button
+          onClick={handleOpenForm}
+          className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none"
+        >
           Request Access
         </Button>
       </Collapse>
+
+      <AccessForm
+        setOpen={setOpenForm}
+        open={openForm}
+        handleOpen={handleOpenForm}
+      />
     </Navbar>
   );
 }
