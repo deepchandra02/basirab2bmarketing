@@ -37,6 +37,9 @@ module.exports = withMT({
           "Segoe UI Symbol",
           "Noto Color Emoji",
         ],
+        warsawCondensed: ["Warsaw Gothic Condensed"],
+        warsaw: ["Warsaw Gothic"],
+        allura: ["Allura"],
       },
       colors: {
         black2: "#111111",

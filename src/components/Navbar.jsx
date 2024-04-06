@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   Collapse,
@@ -29,10 +29,10 @@ function NavItem({ icon, label, to, offset, onClick }) {
 }
 
 export function NavbarFilled() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
-  const [openForm, setOpenForm] = React.useState(true);
+  const [openForm, setOpenForm] = React.useState(false);
   const handleOpenForm = () => setOpenForm((cur) => !cur);
 
   React.useEffect(() => {
