@@ -1,0 +1,14 @@
+{
+    "name": "Basira - for restaurants",
+    "short_name": "Basira - for restaurants",
+    "icons": [
+        {
+            "src": "/android-chrome-144x144.png?v=2",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone"
+}

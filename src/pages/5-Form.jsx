@@ -1,12 +1,11 @@
 import React from "react";
-// eslint-disable-next-line no-unused-vars
 import Footer from "../components/Footer";
 import { Button, Typography } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 function Form() {
   return (
-    <div className="bg-black2 p-4 md:p-8 min-h-screen flex flex-col justify-between overflow-x-hidden">
+    <div className="bg-black2 p-4 md:p-8 pb-0 md:pb-0 flex flex-col justify-between overflow-x-hidden">
       <div className="grid max-w-[1170px] mx-auto">
         <div className="text-center my-8 lg:mb-16">
           {/* <Typography
@@ -39,7 +38,7 @@ function Form() {
             <span class="mx-4 ">Elevate Dining with AI Waiter Tech!</span>
           </div>
           <div class="absolute top-0 animate-marquee2 whitespace-nowrap">
-            <span class="mx-4 ">Stay ahead of your competition</span>
+            <span class="mx-4 "> Stay ahead of your competition</span>
             <span class="mx-4 ">Start for free</span>
             <span class="mx-4 ">Customise your style</span>
             <span class="mx-4 ">Efficiency meets excellence here!</span>
@@ -55,7 +54,7 @@ function Form() {
           <ArrowRightIcon className="ml-4 w-10 md:w-14 stroke-white" />
         </Button>
       </div>
-      {/* <Footer className="mx-auto" /> */}
+      <Footer className="mx-auto" />
     </div>
   );
 }
