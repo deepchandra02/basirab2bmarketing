@@ -171,7 +171,9 @@ function AccessForm(props) {
                   value={formFields.name}
                   onChange={handleChange}
                   error={errors.name}
-                  containerProps={{ className: "!min-w-full" }}
+                  containerProps={{
+                    className: "!min-w-full",
+                  }}
                 />
                 <Input
                   className="!text-white"

@@ -5,6 +5,14 @@
 @import url(https://db.onlinewebfonts.com/c/36d9c2c2deabc10613d43f5afccf18a3?family=Warsaw+Gothic);
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
