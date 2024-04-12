@@ -7,9 +7,16 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import card1 from "../assets/features/card1.png";
-import card2 from "../assets/features/card2.png";
-import card3 from "../assets/features/card3.png";
+import card1 from "../assets/features/card1.jpg";
+import card2 from "../assets/features/card2.jpg";
+import card3 from "../assets/features/card3.jpg";
+import card4 from "../assets/features/card4.jpg";
+import card5 from "../assets/features/card5.jpg";
+import card6 from "../assets/features/card6.jpg";
+import card7 from "../assets/features/card7.jpg";
+import card8 from "../assets/features/card8.jpg";
+import card9 from "../assets/features/card9.jpg";
+import card10 from "../assets/features/card10.jpg";
 
 function ContentCard({ img, title, desc, className }) {
   return (
@@ -21,7 +28,7 @@ function ContentCard({ img, title, desc, className }) {
         shadow={false}
         className="bg-[#F3F2ED] mt-5 relative items-center"
       >
-        <img src={img} alt="" className="mx-auto h-60" />
+        <img src={img} alt="" className="mx-auto h-60 rounded-[1.75rem]" />
       </CardHeader>
       <CardBody>
         <Typography
@@ -42,23 +49,53 @@ function ContentCard({ img, title, desc, className }) {
 const contents = [
   {
     img: card1,
-    title: "Recommendations for guests",
-    desc: "High-margin menu item recommendations based on customers' demographics, preferences, allergies, frequency and time of visits, customer feedback, and special requests.",
+    title: "AI-Powered Menu Recommendations",
+    desc: "Emotionally intelligent chatbot that offers personalized meal recommendations based on guest’s preferences, past orders, allergies, and dietary needs.",
   },
   {
     img: card2,
-    title: "Demand analytics and forecasting",
-    desc: "Forecasting based on consumer behavior information (time of ordering specific meals) which allows to order and prepare food in advance. Full analytics for hourly, daily, weekly, and monthly operations.",
+    title: "Custom Digital Menu",
+    desc: "Menu with detailed item descriptions, nutritional information, and customizable options for ingredient adjustments and spice levels.",
   },
   {
     img: card3,
-    title: "Menu Customization",
-    desc: "Data-driven menu customization based on guests requests: food choices and rating, adjust the menu to meet the demand and follow the trends.",
+    title: "Data-driven Menu Adjustments",
+    desc: "We suggest modifications for menu based on guests requests: demanding missing ingredients, rating and feedback.",
   },
   {
-    img: {},
-    title: "Online Orders",
-    desc: "Online order management with special notes and notifications with the ability to modify the order in minutes. We reduce orders made by mistake.",
+    img: card4,
+    title: "Online Ordering & Basket System",
+    desc: "Online order management with special notes and notifications with the ability to modify the order in the digital basket. We reduce orders made by mistake.",
+  },
+  {
+    img: card5,
+    title: "QR Code Menu Access",
+    desc: "Quick and easy access to the menu through a QR code scan, facilitating table-specific ordering and service.",
+  },
+  {
+    img: card6,
+    title: "Interactive Customer Interface",
+    desc: "Real-time food preparation tracking, buttons for calling a waiter, asking for bills, or ordering takeaways.",
+  },
+  {
+    img: card7,
+    title: "Waiter Table View",
+    desc: "View for waiters showing table details, guest information, and dining preferences, complete with a 'close table' feature.",
+  },
+  {
+    img: card8,
+    title: "Upsell Scripts & Recommendations for Waiters",
+    desc: "Scripts and menu item recommendations for waiters to upsell high-margin items while guests are sitting too long, enhancing guest experiences and boosting sales.",
+  },
+  {
+    img: card9,
+    title: "Push to sell specific items",
+    desc: "To highlight specific menu items for recommendation through the AI chatbot, aiming to reduce costs and sell more.",
+  },
+  {
+    img: card10,
+    title: "Analytics Dashboard",
+    desc: "Management dashboard for detailed insights on sales, customer feedback, and menu demand.",
   },
 ];
 
