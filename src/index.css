@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url(https://db.onlinewebfonts.com/c/4f90c59727e88d40e07ff43fb918b478?family=Warsaw+Gothic+Condensed);
-@import url(https://db.onlinewebfonts.com/c/36d9c2c2deabc10613d43f5afccf18a3?family=Warsaw+Gothic);
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&display=swap");
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

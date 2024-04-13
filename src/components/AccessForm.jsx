@@ -122,13 +122,13 @@ function AccessForm(props) {
         </video>
         <DialogHeader className="flex flex-col justify-between bg-transparent text-[#ffedd8] mt-4">
           <div className="flex justify-between items-center w-full">
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay1">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay1">
               KNOW
             </Typography>
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay2">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay2">
               YOUR
             </Typography>
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay3">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay3">
               DINER
             </Typography>
 
@@ -138,10 +138,10 @@ function AccessForm(props) {
             />
           </div>
           <div className="flex flex-col justify-center items-center w-full mt-2 fadeIn delay4">
-            <Typography className="font-allura text-3xl md:text-4xl mb-2">
+            <Typography className="font-garamond italic text-xl md:text-3xl mb-2">
               Estimated release date
             </Typography>
-            <Typography className="uppercase font-medium">
+            <Typography className="font-garamond uppercase font-medium text-2xl md:text-4xl">
               May 1, 2024
             </Typography>
             <Typography className="md:hidden mt-2">

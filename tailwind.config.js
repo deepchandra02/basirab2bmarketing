@@ -21,9 +21,8 @@ module.exports = withMT({
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system"],
-        // warsawCondensed: ["Warsaw Gothic Condensed"],
-        // warsaw: ["Warsaw Gothic"],
-        // allura: ["Allura"],
+        garamond: ["EB Garamond"],
+        barlowCondensed: ["Barlow Condensed"],
       },
       colors: {
         black2: "#111111",
