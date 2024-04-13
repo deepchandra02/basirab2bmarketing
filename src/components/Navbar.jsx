@@ -14,17 +14,19 @@ import AccessForm from "./AccessForm";
 
 function NavItem({ icon, label, to, offset, onClick }) {
   return (
-    <Link
-      to={to}
-      smooth={true}
-      duration={500}
-      offset={offset}
-      onClick={onClick}
-      className="cursor-pointer flex items-center gap-1.5 p-1 font-medium lg:text-xl"
-    >
-      {icon}
-      {label}
-    </Link>
+    <li className="list-none">
+      <Link
+        to={to}
+        smooth={true}
+        duration={500}
+        offset={offset}
+        onClick={onClick}
+        className="cursor-pointer flex items-center gap-1.5 p-1 font-medium lg:text-xl"
+      >
+        {icon}
+        {label}
+      </Link>
+    </li>
   );
 }
 
@@ -40,6 +42,11 @@ export function NavbarFilled() {
       "resize",
       () => window.innerWidth >= 960 && setOpen(false)
     );
+    return () =>
+      window.removeEventListener(
+        "resize",
+        () => window.innerWidth >= 960 && setOpen(false)
+      );
   }, []);
 
   return (
@@ -62,7 +69,6 @@ export function NavbarFilled() {
             <NavItem label="Features" to="features" offset={-80} />
             <NavItem label="Guest" to="guest" offset={-70} />
           </ul>
-          {/* //TODO: Functionality to give access */}
           <Button
             onClick={handleOpenForm}
             className="h-10 border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent transition duration-500 ease-in-out animate-pulse hover:animate-none"
@@ -71,6 +77,7 @@ export function NavbarFilled() {
           </Button>
         </div>
         <IconButton
+          aria-label={open ? "Close menu" : "Open menu"}
           size="sm"
           variant="text"
           color="white"
@@ -105,7 +112,6 @@ export function NavbarFilled() {
             onClick={() => setOpen(false)}
           />
         </ul>
-        {/* //TODO: Functionality to give access */}
         <Button
           onClick={handleOpenForm}
           className="border border-lightgold bg-lightgold text-black hover:text-lightgold hover:bg-transparent lg:inline-block transition duration-500 ease-in-out animate-pulse hover:animate-none"

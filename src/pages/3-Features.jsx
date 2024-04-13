@@ -37,9 +37,8 @@ function ContentCard({ img, title, desc, className }) {
       </CardHeader>
       <CardBody className="flex flex-col">
         <Typography
-          variant="h5"
           color="blue-gray"
-          className="mb-3 normal-case transition-colors hover:text-gray-700"
+          className="mb-3 text-xl font-semibold normal-case transition-colors hover:text-gray-700"
         >
           {title}
         </Typography>
@@ -186,6 +185,7 @@ function Features() {
           </Typography>
           <div className="flex w-max gap-4">
             <IconButton
+              aria-label={"scroll left"}
               disabled={atInitial}
               onClick={scrollLeft}
               variant={atInitial ? "outlined" : "filled"}
@@ -197,6 +197,7 @@ function Features() {
               <ChevronLeftIcon className="w-6 h-6" />
             </IconButton>
             <IconButton
+              aria-label={"scroll right"}
               disabled={atEnd}
               onClick={scrollRight}
               variant={atEnd ? "outlined" : "filled"}

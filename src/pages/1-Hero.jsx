@@ -44,7 +44,6 @@ function Hero() {
               No additional staff required.
             </Typography>
             <div className="mt-8 grid w-full place-items-start md:justify-center">
-              {/* //TODO: Functionality to give access */}
               <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
                 <Button
                   onClick={handleOpenForm}
