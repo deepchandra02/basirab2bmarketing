@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography, Button, Card, CardBody } from "@material-tailwind/react";
-import cards from "../assets/process/card1.png";
+import cards from "../assets/process/card1.webp";
 import note_taking from "../assets/process/card3.png";
 import AccessForm from "../components/AccessForm";
 

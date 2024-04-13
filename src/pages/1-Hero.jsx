@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Typography } from "@material-tailwind/react";
-import herobg from "../assets/hero/hero.png";
+import herobg from "../assets/hero/hero.webp";
 import AccessForm from "../components/AccessForm";
 
 function Hero() {
@@ -31,7 +31,7 @@ function Hero() {
             </Typography>
           </div>
           <div
-            className="h-[28em] mt-10 md:h-[35em] lg:h-[40em] xl:h-[50em] 2xl:h-[70em] bg-cover bg-center bg-no-repeat"
+            className="h-[28em] mt-10 md:h-[35em] lg:h-[40em] xl:h-[50em] 2xl:h-[70em] bg-cover bg-center bg-no-repeat "
             style={{ backgroundImage: `url(${herobg})` }}
           ></div>
           <div className="container mt-10 md:mt-16 mx-auto grid place-items-center text-center px-4">

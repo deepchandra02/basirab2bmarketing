@@ -7,16 +7,16 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import card1 from "../assets/features/card1.jpg";
-import card2 from "../assets/features/card2.jpg";
-import card3 from "../assets/features/card3.jpg";
-import card4 from "../assets/features/card4.jpg";
-import card5 from "../assets/features/card5.jpg";
-import card6 from "../assets/features/card6.jpg";
-import card7 from "../assets/features/card7.jpg";
-import card8 from "../assets/features/card8.jpg";
-import card9 from "../assets/features/card9.jpg";
-import card10 from "../assets/features/card10.jpg";
+import card1 from "../assets/features/card1.webp";
+import card2 from "../assets/features/card2.webp";
+import card3 from "../assets/features/card3.webp";
+import card4 from "../assets/features/card4.webp";
+import card5 from "../assets/features/card5.webp";
+import card6 from "../assets/features/card6.webp";
+import card7 from "../assets/features/card7.webp";
+import card8 from "../assets/features/card8.webp";
+import card9 from "../assets/features/card9.webp";
+import card10 from "../assets/features/card10.webp";
 
 function ContentCard({ img, title, desc, className }) {
   return (
@@ -30,7 +30,7 @@ function ContentCard({ img, title, desc, className }) {
       >
         <img src={img} alt="" className="mx-auto h-60 rounded-[1.75rem]" />
       </CardHeader>
-      <CardBody>
+      <CardBody className="flex flex-col">
         <Typography
           variant="h5"
           color="blue-gray"

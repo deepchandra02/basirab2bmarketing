@@ -1,6 +1,6 @@
 import { Typography, Card, CardBody } from "@material-tailwind/react";
-import phone1 from "../assets/guest/iphone1.png";
-import phone2 from "../assets/guest/iphone2.png";
+import phone1 from "../assets/guest/iphone1.webp";
+import phone2 from "../assets/guest/iphone2.webp";
 
 export function ContentCard({ title, description, image, className }) {
   return (
