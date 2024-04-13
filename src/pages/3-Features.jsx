@@ -28,7 +28,12 @@ function ContentCard({ img, title, desc, className }) {
         shadow={false}
         className="bg-[#F3F2ED] mt-5 relative items-center"
       >
-        <img src={img} alt="" className="mx-auto h-60 rounded-[1.75rem]" />
+        <img
+          src={img}
+          alt={title}
+          loading="lazy"
+          className="mx-auto h-60 rounded-[1.75rem]"
+        />
       </CardHeader>
       <CardBody className="flex flex-col">
         <Typography

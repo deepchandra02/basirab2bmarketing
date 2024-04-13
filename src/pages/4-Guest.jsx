@@ -10,7 +10,12 @@ export function ContentCard({ title, description, image, className }) {
           {title}
         </Typography>
         {image && (
-          <img src={image} alt={title} className="mx-auto h-96 rounded-lg" />
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            className="mx-auto h-96 rounded-lg"
+          />
         )}
       </CardBody>
     </Card>

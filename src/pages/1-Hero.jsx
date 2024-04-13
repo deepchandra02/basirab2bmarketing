@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Typography } from "@material-tailwind/react";
 import herobg from "../assets/hero/hero.webp";
 import AccessForm from "../components/AccessForm";
+import { Helmet } from "react-helmet";
 
 function Hero() {
   const [openForm, setOpenForm] = useState(false);
@@ -9,6 +10,9 @@ function Hero() {
 
   return (
     <>
+      <Helmet>
+        <link rel="preload" as="image" href={herobg} />
+      </Helmet>
       <div
         id="hero"
         className="bg-black2 text-lightgold md:min-h-screen rounded-b-3xl md:rounded-b-[4em]"
