@@ -92,7 +92,7 @@ function Process() {
                 <img
                   src={note_taking}
                   alt="note taking illustration"
-                  className="h-28 w-28 mx-auto"
+                  className="h-28 w-auto mx-auto"
                 />
               </CardBody>
             </Card>

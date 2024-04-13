@@ -55,14 +55,14 @@ export function NavbarFilled() {
       className="sticky top-0 z-50 px-4 md:px-8 bg-black2 bg-opacity-100 border-none text-lightgold"
     >
       <div className="container mx-auto flex items-center justify-between max-w-full">
-        <Link to="hero" smooth={true} duration={1000} offset={-200}>
+        <a href="https://basira.life">
           <div className="flex gap-2 items-center">
             <img src={logo} alt="logo" className="h-8 lg:h-10 2xl:h-12" />
             <Typography className="ml-1 lg:ml-2 text-lg lg:text-2xl font-semibold cursor-pointer">
               Basira
             </Typography>
           </div>
-        </Link>
+        </a>
         <div className="hidden lg:flex gap-8">
           <ul className="mb-4 mt-2 flex flex-col gap-3 lg:mb-0 lg:mt-0 lg:flex-row lg:gap-4">
             <NavItem label="Process" to="process" offset={-70} />

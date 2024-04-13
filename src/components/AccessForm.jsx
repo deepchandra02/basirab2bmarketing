@@ -12,7 +12,9 @@ import {
 import { IoCloseCircle } from "react-icons/io5";
 import { IoIosSend } from "react-icons/io";
 import formbg from "../assets/accessForm/coffee.jpg";
+import backgroundVideo from "../assets/accessForm/coffee.mp4";
 import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet";
 
 function AccessForm(props) {
   const form = useRef();
@@ -101,53 +103,66 @@ function AccessForm(props) {
 
   return (
     <>
+      <Helmet>
+        <link rel="preload" as="video" href={backgroundVideo} />
+      </Helmet>
       <Dialog
-        className="p-4 px-0 bg-center bg-cover bg-no-repeat !justify-between"
+        className="p-4 pt-0 px-0 bg-center bg-cover bg-no-repeat !justify-between"
         size="xxl"
         open={props.open}
         handler={props.handleOpen}
-        style={{ backgroundImage: `url(${formbg})` }}
       >
-        <DialogHeader className="relative flex flex-col w-full justify-between bg-transparent text-[#ffedd8]">
+        <video
+          autoPlay
+          playsInline // This is critical for iOS devices
+          muted
+          loop
+          className="absolute w-full h-full object-cover" // Ensures the video covers the entire background
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+        <DialogHeader className="flex flex-col justify-between bg-transparent text-[#ffedd8] mt-4">
           <div className="flex justify-between items-center w-full">
-            <Typography className="mt-2 text-6xl md:text-8xl lg:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay1">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay1">
               KNOW
             </Typography>
-            <Typography className="mt-2 text-6xl md:text-8xl lg:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay2">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay2">
               YOUR
             </Typography>
-            <Typography className="mt-2 text-6xl md:text-8xl lg:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay3">
+            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-warsawCondensed md:font-warsaw fadeIn delay3">
               DINER
             </Typography>
 
             <IoCloseCircle
               onClick={props.handleOpen}
-              className="absolute right-1 -top-2 w-8 h-8 text-[#ffedd8] opacity-30 hover:opacity-80 hover:cursor-pointer"
+              className="absolute right-1 top-2 w-8 h-8 text-[#ffedd8] opacity-30 hover:opacity-80 hover:cursor-pointer"
             />
           </div>
           <div className="flex flex-col justify-center items-center w-full mt-2 fadeIn delay4">
-            <Typography className="font-allura text-3xl md:text-4xl">
+            <Typography className="font-allura text-3xl md:text-4xl mb-2">
               Estimated release date
             </Typography>
             <Typography className="uppercase font-medium">
               May 1, 2024
             </Typography>
-            <Typography>Save your spot before everyone else does!</Typography>
+            <Typography className="md:hidden mt-2">
+              Save your spot before everyone else does!
+            </Typography>
           </div>
         </DialogHeader>
         <DialogBody className="moveInUp delay5">
-          <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:items-end pb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-items-center pb-4">
             <div>
               <Typography
                 variant="h4"
                 color="white"
-                className="mb-2 max-w-2xl lg:max-w-md"
+                className="mb-2 max-w-2xl lg:max-w-md 2xl:max-w-xl text-center lg:text-left"
               >
                 We know – diving into AI might seem like a big step.
               </Typography>
               <Typography
                 color="white"
-                className="mb-4 max-w-2xl lg:max-w-md text-justify"
+                className="mb-4 lg:mb-0 max-w-2xl lg:max-w-md 2xl:max-w-xl text-justify"
               >
                 That's why we offer a free 1-on-1 session where you can see
                 Basira AI in action. No commitment, just your questions answered
@@ -157,9 +172,16 @@ function AccessForm(props) {
             </div>
             <form
               ref={form}
-              className="flex flex-col gap-6 w-full max-w-2xl lg:max-w-md mt-2"
+              className="flex flex-col gap-6 w-full max-w-2xl lg:max-w-md 2xl:max-w-xl mt-2 lg:mt-0"
               onSubmit={handleSubmit}
             >
+              <Typography
+                variant="h4"
+                className="hidden md:flex mb-4 text-center mx-auto lg:mx-0"
+                color="white"
+              >
+                Save your spot before everyone else does!
+              </Typography>
               <div className="grid gap-4 grid-cols-2 w-full">
                 <Input
                   className="!text-white"
