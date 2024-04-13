@@ -11,7 +11,6 @@ import {
 } from "@material-tailwind/react";
 import { IoCloseCircle } from "react-icons/io5";
 import { IoIosSend } from "react-icons/io";
-import formbg from "../assets/accessForm/coffee.jpg";
 import backgroundVideo from "../assets/accessForm/coffee.mp4";
 import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet";
