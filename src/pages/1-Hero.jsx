@@ -5,7 +5,7 @@ import AccessForm from "../components/AccessForm";
 import { Helmet } from "react-helmet";
 
 function Hero() {
-  const [openForm, setOpenForm] = useState(false);
+  const [openForm, setOpenForm] = useState(true);
   const handleOpenForm = () => setOpenForm((cur) => !cur);
 
   return (
