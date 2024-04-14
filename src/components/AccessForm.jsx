@@ -120,15 +120,16 @@ function AccessForm(props) {
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>
-        <DialogHeader className="flex flex-col justify-between bg-transparent text-[#ffedd8] mt-4">
+        <div className="absolute w-full h-full bg-black opacity-30"></div>
+        <DialogHeader className="flex flex-col justify-between bg-transparent text-[#ffedd8] mt-4 lg:mx-4">
           <div className="flex justify-between items-center w-full">
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay1">
+            <Typography className="tracking-tighter mt-2 text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold font-barlowCondensed fadeIn delay1">
               KNOW
             </Typography>
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay2">
+            <Typography className="tracking-tighter mt-2 text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold font-barlowCondensed fadeIn delay2">
               YOUR
             </Typography>
-            <Typography className="mt-2 text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold font-barlowCondensed fadeIn delay3">
+            <Typography className="tracking-tighter mt-2 text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold font-barlowCondensed fadeIn delay3">
               DINER
             </Typography>
 
@@ -137,11 +138,11 @@ function AccessForm(props) {
               className="absolute right-1 top-2 w-8 h-8 text-[#ffedd8] opacity-30 hover:opacity-80 hover:cursor-pointer"
             />
           </div>
-          <div className="flex flex-col justify-center items-center w-full mt-2 fadeIn delay4">
-            <Typography className="font-garamond italic text-xl md:text-3xl mb-2">
+          <div className="flex flex-col justify-center items-center w-full mt-4 fadeIn delay4">
+            <Typography className="font-garamond italic text-xl md:text-3xl">
               Estimated release date
             </Typography>
-            <Typography className="font-garamond uppercase font-medium text-2xl md:text-4xl">
+            <Typography className="font-garamond uppercase text-2xl md:text-4xl -mt-1">
               May 1, 2024
             </Typography>
             <Typography className="md:hidden mt-2">
@@ -149,19 +150,18 @@ function AccessForm(props) {
             </Typography>
           </div>
         </DialogHeader>
-        <DialogBody className="moveInUp delay5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-items-center pb-4">
-            <div>
+        <DialogBody className="moveInUp delay5 lg:mx-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-end pb-4">
+            <div className="lg:justify-self-start">
               <Typography
-                variant="h4"
                 color="white"
-                className="mb-2 max-w-2xl lg:max-w-md 2xl:max-w-xl text-center lg:text-left"
+                className="text-3xl font-garamond font-semibold mb-2 max-w-2xl lg:max-w-md 2xl:max-w-xl text-center lg:text-left"
               >
                 We know – diving into AI might seem like a big step.
               </Typography>
               <Typography
                 color="white"
-                className="mb-4 lg:mb-0 max-w-2xl lg:max-w-md 2xl:max-w-xl text-justify"
+                className="mb-4 lg:mb-0 text-xl font-garamond font-medium max-w-2xl lg:max-w-md 2xl:max-w-xl text-justify"
               >
                 That's why we offer a free 1-on-1 session where you can see
                 Basira AI in action. No commitment, just your questions answered
@@ -171,19 +171,18 @@ function AccessForm(props) {
             </div>
             <form
               ref={form}
-              className="flex flex-col gap-6 w-full max-w-2xl lg:max-w-md 2xl:max-w-xl mt-2 lg:mt-0"
+              className="lg:justify-self-end flex flex-col gap-6 w-full max-w-2xl lg:max-w-xl 2xl:max-w-xl mt-2 lg:mt-0"
               onSubmit={handleSubmit}
             >
               <Typography
-                variant="h4"
-                className="hidden md:flex mb-4 text-center mx-auto lg:mx-0"
+                className="hidden font-garamond text-2xl font-medium md:flex mb-4 text-center mx-auto lg:mx-0"
                 color="white"
               >
                 Save your spot before everyone else does!
               </Typography>
               <div className="grid gap-4 grid-cols-2 w-full">
                 <Input
-                  className="!text-white"
+                  className="!text-white !font-garamond"
                   size="lg"
                   variant="static"
                   color="white"
@@ -197,7 +196,7 @@ function AccessForm(props) {
                   }}
                 />
                 <Input
-                  className="!text-white"
+                  className="!text-white !font-garamond"
                   size="lg"
                   variant="static"
                   color="white"
@@ -219,7 +218,7 @@ function AccessForm(props) {
                 onChange={handleChange}
                 error={errors.message}
                 labelProps={{ className: "!text-white" }}
-                className="!text-white"
+                className="!text-white !font-garamond"
               />
               <Button
                 type="submit"
